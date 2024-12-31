@@ -1,0 +1,16 @@
+<GridLayout columns="auto,*" class="recipe-card">
+    <StackLayout col="0" class="recipe-image-container">
+        <Image src="{{ image }}" class="recipe-image" />
+    </StackLayout>
+    <StackLayout col="1" class="recipe-content">
+        <Label text="{{ title }}" class="recipe-title" />
+        <GridLayout columns="auto,*" class="recipe-meta">
+            <Label col="0" text="{{ prepTime }}" class="recipe-time" />
+            <FlexboxLayout col="1" class="recipe-tags">
+                <Label text="🌱" class="recipe-tag" visibility="{{ isVegan ? 'visible' : 'collapsed' }}" />
+                <Label text="⚡" class="recipe-tag" visibility="{{ isQuick ? 'visible' : 'collapsed' }}" />
+                <Label text="💰" class="recipe-tag" visibility="{{ isLowBudget ? 'visible' : 'collapsed' }}" />
+            </FlexboxLayout>
+        </GridLayout>
+    </StackLayout>
+</GridLayout>

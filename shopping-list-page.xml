@@ -1,0 +1,23 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Shopping List" class="header">
+        <NavigationButton text="Back" />
+        <ActionItem ios.position="right" android.position="actionBar" tap="{{ onAddItem }}">
+            <Label text="+" class="text-2xl" />
+        </ActionItem>
+    </ActionBar>
+
+    <GridLayout rows="*, auto">
+        <ListView items="{{ shoppingItems }}" class="list-group">
+            <ListView.itemTemplate>
+                <GridLayout columns="auto, *, auto" class="p-2">
+                    <CheckBox col="0" checked="{{ completed }}" />
+                    <Label col="1" text="{{ name }}" 
+                           class="{{ completed ? 'line-through text-gray-400' : '' }}" />
+                    <Label col="2" text="❌" tap="{{ $parents['ListView'].onDeleteItem }}" />
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+
+        <Button row="1" text="Add New Item" tap="{{ onAddItem }}" class="primary-btn" />
+    </GridLayout>
+</Page>

@@ -1,0 +1,68 @@
+/* Base styles */
+.page {
+    background-color: #FFFAF4;
+}
+
+/* Typography */
+.heading-xl {
+    font-size: 32;
+    font-weight: bold;
+    color: #1A1A1A;
+}
+
+.heading-l {
+    font-size: 24;
+    font-weight: bold;
+    color: #1A1A1A;
+}
+
+/* Cards */
+.card {
+    background-color: white;
+    border-radius: 16;
+    elevation: 4;
+    margin: 8;
+    padding: 16;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #FFB862;
+    color: white;
+    font-size: 16;
+    font-weight: bold;
+    border-radius: 24;
+    padding: 16 24;
+    elevation: 4;
+}
+
+.btn-secondary {
+    background-color: #7C88FF;
+    color: white;
+    font-size: 16;
+    font-weight: bold;
+    border-radius: 24;
+    padding: 16 24;
+}
+
+/* Navigation */
+.bottom-nav {
+    background-color: white;
+    elevation: 8;
+}
+
+.nav-item {
+    padding: 8;
+    text-align: center;
+}
+
+.nav-icon {
+    font-size: 24;
+    color: #666666;
+}
+
+.nav-label {
+    font-size: 12;
+    color: #666666;
+    margin-top: 4;
+}

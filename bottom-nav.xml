@@ -1,0 +1,5 @@
+<GridLayout rows="*" columns="*,*,*" class="bg-white p-4 border-t border-gray-200">
+    <Label col="0" text="🛒" tap="onNavigateToShoppingList" class="text-center text-2xl" />
+    <Label col="1" text="👤" tap="onNavigateToProfile" class="text-center text-2xl" />
+    <Label col="2" text="⚙️" tap="onNavigateToSettings" class="text-center text-2xl" />
+</GridLayout>

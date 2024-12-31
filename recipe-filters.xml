@@ -1,0 +1,8 @@
+<GridLayout rows="auto" columns="auto,auto,auto" class="filters-section p-2">
+    <Button col="0" text="Vegan" tap="{{ toggleVegan }}" 
+            class="{{ isVegan ? 'filter-active' : 'filter-inactive' }}" />
+    <Button col="1" text="Quick" tap="{{ toggleQuick }}" 
+            class="{{ isQuick ? 'filter-active' : 'filter-inactive' }}" />
+    <Button col="2" text="Budget" tap="{{ toggleLowBudget }}" 
+            class="{{ isLowBudget ? 'filter-active' : 'filter-inactive' }}" />
+</GridLayout>

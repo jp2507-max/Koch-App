@@ -1,0 +1,8 @@
+<StackLayout class="ingredients-section p-4">
+    <Label text="Recognized Ingredients" class="heading-l mb-4" />
+    <ListView items="{{ ingredients }}" class="ingredient-list">
+        <ListView.itemTemplate>
+            <Label text="{{ name }}" class="ingredient-item p-3" />
+        </ListView.itemTemplate>
+    </ListView>
+</StackLayout>

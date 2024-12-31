@@ -1,0 +1,69 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+    <ActionBar class="action-bar">
+        <GridLayout columns="auto, *, auto" class="header">
+            <Label col="0" text="←" class="back-button" tap="{{ onBack }}" />
+            <Label col="1" text="HealthyChef" class="app-title" />
+            <Label col="2" text="👤" class="profile-icon" tap="{{ onNavigateToProfile }}" />
+        </GridLayout>
+    </ActionBar>
+
+    <GridLayout rows="*, auto">
+        <ScrollView row="0">
+            <StackLayout class="main-content p-4">
+                <!-- Welcome Section -->
+                <StackLayout class="welcome-section">
+                    <Label>
+                        <FormattedString>
+                            <Span text="{{ greeting }}" class="heading-xl" />
+                            <Span text=",\n" class="heading-xl" />
+                            <Span text="{{ userName }}" class="heading-xl heading-highlight" />
+                            <Span text="!" class="heading-xl" />
+                        </FormattedString>
+                    </Label>
+                    <Label text="What would you like to cook today?" class="text-secondary" />
+                </StackLayout>
+
+                <!-- Action Cards -->
+                <GridLayout rows="auto, auto" columns="*, *" class="action-cards">
+                    <!-- Scan Fridge -->
+                    <StackLayout row="0" col="0" class="action-card action-card-scan" tap="{{ onScanFridge }}">
+                        <Label text="📸" class="card-icon" />
+                        <Label text="Scan&#xA;Fridge" class="card-title" textWrap="true" />
+                    </StackLayout>
+
+                    <!-- Add Pantry -->
+                    <StackLayout row="0" col="1" class="action-card action-card-pantry" tap="{{ onAddPantryItems }}">
+                        <Label text="🥘" class="card-icon" />
+                        <Label text="Add&#xA;Pantry" class="card-title" textWrap="true" />
+                    </StackLayout>
+
+                    <!-- Discover Recipes -->
+                    <StackLayout row="1" colSpan="2" class="action-card action-card-recipes" tap="{{ onDiscoverRecipes }}">
+                        <Label text="📖" class="card-icon" />
+                        <Label text="Discover Recipes" class="card-title" />
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Bottom Navigation -->
+        <GridLayout row="1" columns="*,*,*,*" class="bottom-nav">
+            <StackLayout col="0" class="nav-item" tap="{{ onNavigateToHome }}">
+                <Label text="🏠" class="nav-icon" />
+                <Label text="Home" class="nav-label" />
+            </StackLayout>
+            <StackLayout col="1" class="nav-item" tap="{{ onNavigateToShoppingList }}">
+                <Label text="🛒" class="nav-icon" />
+                <Label text="Shopping" class="nav-label" />
+            </StackLayout>
+            <StackLayout col="2" class="nav-item" tap="{{ onNavigateToProfile }}">
+                <Label text="👤" class="nav-icon" />
+                <Label text="Profile" class="nav-label" />
+            </StackLayout>
+            <StackLayout col="3" class="nav-item" tap="{{ onNavigateToSettings }}">
+                <Label text="⚙️" class="nav-icon" />
+                <Label text="Settings" class="nav-label" />
+            </StackLayout>
+        </GridLayout>
+    </GridLayout>
+</Page>

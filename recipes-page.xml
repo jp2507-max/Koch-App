@@ -1,0 +1,14 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Recipe Suggestions" class="action-bar">
+        <NavigationButton text="Back" />
+    </ActionBar>
+
+    <GridLayout rows="auto,*">
+        <include src="~/screens/recipes/components/recipe-filters.xml" row="0" />
+        <ListView items="{{ recipes }}" row="1">
+            <ListView.itemTemplate>
+                <include src="~/screens/recipes/components/recipe-card.xml" />
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>

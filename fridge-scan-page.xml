@@ -1,0 +1,15 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Scan Fridge" class="action-bar">
+        <NavigationButton text="Back" />
+    </ActionBar>
+
+    <StackLayout class="page">
+        <include src="~/screens/fridge-scan/components/camera-button.xml" />
+        <include src="~/screens/fridge-scan/components/ingredients-list.xml" />
+        
+        <Button text="Suggest Recipes" 
+                tap="{{ onSuggestRecipes }}" 
+                class="btn-primary m-4" 
+                isEnabled="{{ ingredients.length > 0 }}" />
+    </StackLayout>
+</Page>

@@ -1,0 +1,50 @@
+/* Recipe Cards */
+.recipe-card {
+    background-color: white;
+    border-radius: 16;
+    margin: 8 16;
+    elevation: 4;
+}
+
+.recipe-image {
+    width: 80;
+    height: 80;
+    border-radius: 8;
+    margin: 8;
+}
+
+.recipe-title {
+    font-size: 16;
+    font-weight: bold;
+    color: #1A1A1A;
+}
+
+.recipe-time {
+    font-size: 14;
+    color: #666666;
+}
+
+/* Filters */
+.filter-active {
+    background-color: #FFB862;
+    color: white;
+    border-radius: 20;
+    padding: 8 16;
+    margin: 0 4;
+}
+
+.filter-inactive {
+    background-color: #F5F5F5;
+    color: #666666;
+    border-radius: 20;
+    padding: 8 16;
+    margin: 0 4;
+}
+
+/* Ingredient Items */
+.ingredient-item {
+    background-color: white;
+    border-radius: 8;
+    margin: 4 0;
+    elevation: 2;
+}

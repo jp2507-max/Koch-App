@@ -1,0 +1,48 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+    <ActionBar class="action-bar">
+        <GridLayout columns="*, auto">
+            <Label col="0" text="HealthyChef" class="heading-l text-center" />
+            <Label col="1" text="👤" class="text-2xl" tap="{{ onNavigateToProfile }}" />
+        </GridLayout>
+    </ActionBar>
+
+    <GridLayout rows="*, auto">
+        <!-- Main Content -->
+        <ScrollView row="0">
+            <StackLayout class="p-4">
+                <!-- Welcome Section -->
+                <StackLayout class="mb-8">
+                    <Label text="{{ welcomeMessage }}" class="heading-xl mb-2" textWrap="true" />
+                    <Label text="What would you like to cook today?" class="text-secondary mb-4" />
+                </StackLayout>
+
+                <!-- Main Actions -->
+                <GridLayout rows="auto, auto" columns="*, *" class="mb-8">
+                    <!-- Scan Fridge -->
+                    <StackLayout row="0" col="0" class="card" tap="{{ onScanFridge }}"
+                        backgroundColor="{{ colors.categories.fridge }}">
+                        <Label text="📸" class="text-3xl mb-2" />
+                        <Label text="Scan Fridge" class="font-bold" />
+                    </StackLayout>
+
+                    <!-- Add Pantry -->
+                    <StackLayout row="0" col="1" class="card" tap="{{ onAddPantryItems }}"
+                        backgroundColor="{{ colors.categories.pantry }}">
+                        <Label text="🥘" class="text-3xl mb-2" />
+                        <Label text="Add Pantry" class="font-bold" />
+                    </StackLayout>
+
+                    <!-- Discover Recipes -->
+                    <StackLayout row="1" colSpan="2" class="card" tap="{{ onDiscoverRecipes }}"
+                        backgroundColor="{{ colors.categories.recipes }}">
+                        <Label text="📖" class="text-3xl mb-2" />
+                        <Label text="Discover Recipes" class="font-bold" />
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Bottom Navigation -->
+        <include src="~/shared/components/bottom-nav.xml" row="1" />
+    </GridLayout>
+</Page>
